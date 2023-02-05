@@ -1,6 +1,6 @@
 package com.project.api.busca.endereco.cep.enums;
 
-public enum RegioesBrasil {
+public enum RegioesBrasilEnum {
 	
 	PARANA("PR", 1),
 	SANTA_CATARINA("SC", 1),
@@ -33,7 +33,7 @@ public enum RegioesBrasil {
 	private String nome;
 	private Integer codigo;
 	
-	private RegioesBrasil(String nome, Integer codigo) {
+	private RegioesBrasilEnum(String nome, Integer codigo) {
 		this.nome = nome;
 		this.codigo = codigo;
 	}
@@ -56,7 +56,7 @@ public enum RegioesBrasil {
 	
 	public static Integer buscarRegiao(String siglaEstado) {
 
-		for (RegioesBrasil regiao : RegioesBrasil.values()) {
+		for (RegioesBrasilEnum regiao : RegioesBrasilEnum.values()) {
 			if (regiao.getNome().equals(siglaEstado)) {
 				return regiao.getCodigo();
 			}

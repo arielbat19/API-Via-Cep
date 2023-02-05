@@ -5,7 +5,7 @@ import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.project.api.busca.endereco.cep.enums.RegioesBrasil;
+import com.project.api.busca.endereco.cep.enums.RegioesBrasilEnum;
 import com.project.api.busca.endereco.cep.infraestrutura.rest.BuscaEnderecoRestClient;
 import com.project.api.busca.endereco.cep.model.Cep;
 import com.project.api.busca.endereco.cep.model.Endereco;
@@ -27,7 +27,7 @@ public class BuscaEnderecoService {
 			throw new Exception();
 		}
 		
-		Integer regiao = RegioesBrasil.buscarRegiao(endereco.getUf());
+		Integer regiao = RegioesBrasilEnum.buscarRegiao(endereco.getUf());
 		String valorFrete = calcularFrete(regiao);
 		endereco.setFrete(valorFrete);
 		return endereco;
