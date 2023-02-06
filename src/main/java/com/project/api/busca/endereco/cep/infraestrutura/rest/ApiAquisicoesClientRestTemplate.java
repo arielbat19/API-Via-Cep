@@ -1,7 +1,5 @@
 package com.project.api.busca.endereco.cep.infraestrutura.rest;
 
-import java.util.Map;
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.web.client.RestTemplateBuilder;
 import org.springframework.http.HttpEntity;
@@ -23,7 +21,7 @@ public class ApiAquisicoesClientRestTemplate {
 		this.restTemplate = builder.build();
 	}
 
-	public ResponseEntity<String> execute(String endpoint, Map<String, String> headersMap, HttpMethod httpMethod)
+	public ResponseEntity<String> execute(String endpoint, HttpMethod httpMethod)
 			throws HttpClientErrorException {
 
 		HttpHeaders headers = new HttpHeaders();

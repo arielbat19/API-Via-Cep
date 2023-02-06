@@ -32,7 +32,7 @@ public class BuscaEnderecoRestClient {
 		String jsonResposta = null;
 
 		try {
-			response = restTemplate.execute(endpoint, null, HttpMethod.GET);
+			response = restTemplate.execute(endpoint, HttpMethod.GET);
 			jsonResposta = response.getBody();
 
 			return new Gson().fromJson(jsonResposta, Endereco.class);
