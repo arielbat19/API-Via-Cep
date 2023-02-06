@@ -9,7 +9,7 @@ import org.springframework.stereotype.Component;
 import org.springframework.web.client.HttpClientErrorException;
 
 import com.google.gson.Gson;
-import com.project.api.busca.endereco.cep.ApiProfileConfiguration;
+import com.project.api.busca.endereco.cep.BuscaEnderecoProfileConfiguration;
 import com.project.api.busca.endereco.cep.model.Cep;
 import com.project.api.busca.endereco.cep.model.Endereco;
 
@@ -19,10 +19,10 @@ public class BuscaEnderecoRestClient {
 	private final Logger log = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
-	private ApiAquisicoesClientRestTemplate restTemplate;
+	private BuscaEnderecoClientRestTemplate restTemplate;
 
 	@Autowired
-	private ApiProfileConfiguration config;
+	private BuscaEnderecoProfileConfiguration config;
 
 	public Endereco buscarEndereco(Cep cep) throws Exception {
 

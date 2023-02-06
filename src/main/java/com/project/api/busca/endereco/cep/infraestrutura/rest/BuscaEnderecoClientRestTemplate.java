@@ -12,12 +12,12 @@ import org.springframework.web.client.HttpClientErrorException;
 import org.springframework.web.client.RestTemplate;
 
 @Component
-public class ApiAquisicoesClientRestTemplate {
+public class BuscaEnderecoClientRestTemplate {
 
 	private RestTemplate restTemplate;
 
 	@Autowired
-	public ApiAquisicoesClientRestTemplate(RestTemplateBuilder builder) {
+	public BuscaEnderecoClientRestTemplate(RestTemplateBuilder builder) {
 		this.restTemplate = builder.build();
 	}
 

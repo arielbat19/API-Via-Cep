@@ -7,7 +7,7 @@ import org.springframework.context.annotation.PropertySource;
 
 @Configuration
 @PropertySource(ignoreResourceNotFound = true, value = "classpath:profile-${AMBIENTE}.properties")
-public class ApiProfileConfiguration {
+public class BuscaEnderecoProfileConfiguration {
 	
 	@Value("${api.buscacep.endpoint}")
 	private String endpoint;
